@@ -166,23 +166,6 @@ extension BaseViewController {
             self?.dismiss(animated: true, completion: nil)
         }
     }
-    
-    // Add a child view controller, its whole view is embeded in the containerView
-    open func addController(controller: UIViewController, containerView: UIView) {
-        addChildViewController(controller)
-        controller.view.frame = CGRect.init(origin: .zero, size: containerView.frame.size)
-        controller.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        containerView.addSubview(controller.view)
-        controller.didMove(toParentViewController: self)
-    }
-    
-    // To remove the current child view controller
-    public func removeController(controller: UIViewController, containerView: UIView) {
-        controller.willMove(toParentViewController: nil)
-        controller.removeFromParentViewController()
-        controller.view.removeFromSuperview()
-        controller.didMove(toParentViewController: nil)
-    }
 }
 
 extension UIViewController {
