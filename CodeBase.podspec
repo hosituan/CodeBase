@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CodeBase'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'A short description of CodeBase.'
 
 # This description is used to generate tags and improve search results.
