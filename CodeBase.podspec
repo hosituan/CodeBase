@@ -28,9 +28,9 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/hosituan/CodeBase.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
 
-  s.source_files = 'CodeBase/Classes/**/*'
+  s.source_files = '*'
   
   # s.resource_bundles = {
   #   'CodeBase' => ['CodeBase/Assets/*.png']
@@ -38,5 +38,17 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  # 7
+    s.framework = "UIKit"
+    s.dependency 'SnapKit'
+    s.dependency 'CocoaLumberjack/Swift'
+    s.dependency 'Kingfisher'
+    s.dependency 'KeychainAccess'
+    s.dependency 'IQKeyboardManagerSwift', '~> 6.0.4'
+    s.dependency 'Localize-Swift'
+    s.dependency 'DZNEmptyDataSet'
+    s.dependency 'RxSwift',    '~> 4.0'
+    s.dependency 'RxCocoa',    '~> 4.0'
+    s.dependency 'Moya/RxSwift'
+    s.dependency 'SwiftyJSON'
 end

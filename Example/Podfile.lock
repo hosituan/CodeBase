@@ -1,0 +1,82 @@
+PODS:
+  - Alamofire (4.9.1)
+  - CocoaLumberjack/Core (3.7.4)
+  - CocoaLumberjack/Swift (3.7.4):
+    - CocoaLumberjack/Core
+  - CodeBase (0.1.0):
+    - CocoaLumberjack/Swift
+    - DZNEmptyDataSet
+    - IQKeyboardManagerSwift (~> 6.0.4)
+    - KeychainAccess
+    - Kingfisher
+    - Localize-Swift
+    - Moya/RxSwift
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+    - SnapKit
+    - SwiftyJSON
+  - DZNEmptyDataSet (1.8.1)
+  - IQKeyboardManagerSwift (6.0.5)
+  - KeychainAccess (4.2.2)
+  - Kingfisher (4.10.1)
+  - Localize-Swift (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
+    - Localize-Swift/UIKit (= 3.2.0)
+  - Localize-Swift/LocalizeSwiftCore (3.2.0)
+  - Localize-Swift/UIKit (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - Moya/RxSwift (13.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - Result (4.1.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
+  - SnapKit (4.2.0)
+  - SwiftyJSON (5.0.1)
+
+DEPENDENCIES:
+  - CodeBase (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CocoaLumberjack
+    - DZNEmptyDataSet
+    - IQKeyboardManagerSwift
+    - KeychainAccess
+    - Kingfisher
+    - Localize-Swift
+    - Moya
+    - Result
+    - RxCocoa
+    - RxSwift
+    - SnapKit
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  CodeBase:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  CocoaLumberjack: 543c79c114dadc3b1aba95641d8738b06b05b646
+  CodeBase: 2c37e2005b5ddbe5f38fef425d11926d2f26972b
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  IQKeyboardManagerSwift: c14eca30f6001457d6ddf25e313f23fb6578c41c
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+
+PODFILE CHECKSUM: ffa00d607f05a1c8d8fd9005dd8387b68d14bca8
+
+COCOAPODS: 1.11.2
