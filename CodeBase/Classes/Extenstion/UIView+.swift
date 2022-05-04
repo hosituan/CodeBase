@@ -7,16 +7,16 @@
 
 import Foundation
 import UIKit
-extension UIView {
+public extension UIView {
     
     @discardableResult
-    public func addSubviews(_ subviews: UIView...) -> UIView {
+    func addSubviews(_ subviews: UIView...) -> UIView {
         subviews.forEach { addSubview($0) }
         return self
     }
     
     @discardableResult
-    public func addSubViews(_ subviews: [UIView]) -> UIView {
+    func addSubViews(_ subviews: [UIView]) -> UIView {
         subviews.forEach { addSubview($0) }
         return self
     }
@@ -134,7 +134,7 @@ extension UIView {
     }
 }
 
-extension UIView {
+public extension UIView {
     func roundCorners(_ corners: CACornerMask, radius: CGFloat) {
         if #available(iOS 11, *) {
             self.layer.cornerRadius = radius

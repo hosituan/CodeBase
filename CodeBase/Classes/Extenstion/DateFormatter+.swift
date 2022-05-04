@@ -1,8 +1,16 @@
 //
 //  DateFormatter+.swift
-//  CodeBase
+//  Golfull
 //
-//  Created by Ho Si Tuan on 04/05/2022.
+//  Created by Hồ Sĩ Tuấn on 22/07/2021.
 //
 
 import Foundation
+public extension DateFormatter {
+    static func gregorianInit() -> DateFormatter {
+        let dm = DateFormatter()
+        dm.calendar = Calendar(identifier: .gregorian)
+        dm.locale = Locale(identifier: "en_US_POSIX")
+        return dm
+    }
+}

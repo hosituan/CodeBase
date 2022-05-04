@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CodeBase'
-  s.version          = '0.0.4'
+  s.version          = '0.0.6'
   s.summary          = 'A short description of CodeBase.'
 
 # This description is used to generate tags and improve search results.
@@ -24,12 +24,12 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/hosituan/CodeBase'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'hosituan' => 'tuan.ho@c2c-techhub.io' }
+  s.author           = { 'hosituan' => 'hosituan.work@gmail.com' }
   s.source           = { :git => 'https://github.com/hosituan/CodeBase.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://facebook.com/hosituan1'
 
-  s.ios.deployment_target = '12.0'
-  s.swift_version = "5.2"
+  s.ios.deployment_target = '13.0'
+  s.swift_version = '5.2'
   s.source_files = 'CodeBase/**/*'
   
   # s.resource_bundles = {
@@ -37,9 +37,7 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # 7
-    s.framework = "UIKit"
+    s.framework = 'UIKit'
     s.dependency 'SnapKit'
     s.dependency 'CocoaLumberjack/Swift'
     s.dependency 'Kingfisher'

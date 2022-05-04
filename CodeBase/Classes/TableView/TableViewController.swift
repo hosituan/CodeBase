@@ -34,7 +34,9 @@ open class TableViewController: BaseViewController, TableViewSetupable {
 }
 
 extension TableViewController: UITableViewDelegate {
-    
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.tableViewModel?.heightForRow(at: indexPath) ?? UITableView.automaticDimension
+    }
 }
 
 extension TableViewController: UITableViewDataSource {

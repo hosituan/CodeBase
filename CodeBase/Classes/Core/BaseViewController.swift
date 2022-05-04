@@ -84,7 +84,6 @@ open class BaseViewController: UIViewController {
 }
 
 public extension BaseViewController {
-    
     func setupNotifies() {
         NotificationCenter.default.addObserver(self, selector: #selector(languageDidChange), name: Language.languageChangeNotification, object: nil)
     }
@@ -111,9 +110,10 @@ public extension BaseViewController {
 }
 
 public extension BaseViewController {
-    func createCloseLeftNaviItem() {
-        let buttonLeftMenu: UIBarButtonItem = UIBarButtonItem(image: BaseImage.Navigation.backIcon, style: .plain, target: self, action: #selector(didTapLeftCloseButton))
+    func createBackNaviItem() {
+        let buttonLeftMenu: UIBarButtonItem = UIBarButtonItem(image: BaseImage.Navigation.backIcon, style: .plain, target: self, action: #selector(didTapBackButton))
         buttonLeftMenu.imageInsets = UIEdgeInsets(top: 2, left: 0, bottom: -2, right: 0)
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         self.navigationItem.leftBarButtonItem = buttonLeftMenu
     }
     
@@ -121,12 +121,6 @@ public extension BaseViewController {
         let buttonLeftMenu: UIBarButtonItem = UIBarButtonItem(image: BaseImage.Navigation.closeIcon, style: .plain, action: { action?() })
         buttonLeftMenu.imageInsets = UIEdgeInsets(top: 2, left: 0, bottom: -2, right: 0)
         self.navigationItem.leftBarButtonItem = buttonLeftMenu
-    }
-    
-    func createBackButton() {
-        let backButton: UIBarButtonItem = UIBarButtonItem(image: BaseImage.Navigation.backIcon, style: .plain, target: self, action: #selector(didTapLeftCloseButton))
-        backButton.imageInsets = UIEdgeInsets(top: 2, left: 0, bottom: -2, right: 0)
-        self.navigationItem.leftBarButtonItem = backButton
     }
     
     func createRightNaviItem(title: String, action: (() -> Void)?) {
@@ -150,6 +144,9 @@ public extension BaseViewController {
         self.navigationItem.leftBarButtonItem = buttonRightMenu
     }
     
+    @objc func didTapBackButton() {
+        self.navigationController?.popViewController(animated: true)
+    }
     @objc func didTapLeftCloseButton() {
         dismiss(animated: true, completion: nil)
     }
@@ -169,32 +166,6 @@ public extension BaseViewController {
         view.backgroundColor = .black.withAlphaComponent(0.5)
         view.setAction { [weak self] in
             self?.dismiss(animated: true, completion: nil)
-        }
-    }
-}
-
-public extension UIViewController {
-    class func topMostViewController() -> UIViewController? {
-        return UIViewController.topViewControllerForRoot(rootViewController: UIApplication.shared.keyWindow?.rootViewController)
-    }
-    
-    class func topViewControllerForRoot(rootViewController:UIViewController?) -> UIViewController? {
-        guard let rootViewController = rootViewController else {
-            return nil
-        }
-        
-        if rootViewController is UINavigationController {
-            let navigationController:UINavigationController = rootViewController as! UINavigationController
-            return UIViewController.topViewControllerForRoot(rootViewController: navigationController.viewControllers.last)
-            
-        } else if rootViewController is UITabBarController {
-            let tabBarController:UITabBarController = rootViewController as! UITabBarController
-            return UIViewController.topViewControllerForRoot(rootViewController: tabBarController.selectedViewController)
-            
-        } else if rootViewController.presentedViewController != nil {
-            return UIViewController.topViewControllerForRoot(rootViewController: rootViewController.presentedViewController)
-        } else {
-            return rootViewController
         }
     }
 }
