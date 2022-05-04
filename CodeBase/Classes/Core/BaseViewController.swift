@@ -46,6 +46,18 @@ open class BaseViewController: UIViewController {
         observe()
     }
     
+    open func setup() {
+
+    }
+    
+    open func observe() {
+        
+    }
+    
+    open func viewModel() -> BaseViewModel? {
+        return nil
+    }
+    
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -71,7 +83,7 @@ open class BaseViewController: UIViewController {
     }
 }
 
-extension BaseViewController {
+public extension BaseViewController {
     
     func setupNotifies() {
         NotificationCenter.default.addObserver(self, selector: #selector(languageDidChange), name: Language.languageChangeNotification, object: nil)
@@ -87,13 +99,6 @@ extension BaseViewController {
         
     }
     
-    func setup() {
-        BaseImage.Navigation.backIcon = UIImage()
-    }
-    
-    func observe() {
-        
-    }
     
     fileprivate func hideBackButtonTitle() {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
@@ -105,7 +110,7 @@ extension BaseViewController {
     }
 }
 
-extension BaseViewController {
+public extension BaseViewController {
     func createCloseLeftNaviItem() {
         let buttonLeftMenu: UIBarButtonItem = UIBarButtonItem(image: BaseImage.Navigation.backIcon, style: .plain, target: self, action: #selector(didTapLeftCloseButton))
         buttonLeftMenu.imageInsets = UIEdgeInsets(top: 2, left: 0, bottom: -2, right: 0)
@@ -168,12 +173,12 @@ extension BaseViewController {
     }
 }
 
-extension UIViewController {
-    class open func topMostViewController() -> UIViewController? {
+public extension UIViewController {
+    class func topMostViewController() -> UIViewController? {
         return UIViewController.topViewControllerForRoot(rootViewController: UIApplication.shared.keyWindow?.rootViewController)
     }
     
-    class open func topViewControllerForRoot(rootViewController:UIViewController?) -> UIViewController? {
+    class func topViewControllerForRoot(rootViewController:UIViewController?) -> UIViewController? {
         guard let rootViewController = rootViewController else {
             return nil
         }

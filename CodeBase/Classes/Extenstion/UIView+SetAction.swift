@@ -11,7 +11,7 @@ import UIKit
 private var actionKey: Void?
 private var actionLongPressKey: Void?
 extension UIView {
-    func setAction(action: (() -> ())?) {
+    public func setAction(action: (() -> ())?) {
         self.isUserInteractionEnabled = true
         self.action = action
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(pressed))
@@ -33,7 +33,7 @@ extension UIView {
 }
 
 extension Array where Element: UIView {
-    func setAction(action: (() -> ())?) {
+    public func setAction(action: (() -> ())?) {
         for view in self {
             view.setAction(action: action)
         }

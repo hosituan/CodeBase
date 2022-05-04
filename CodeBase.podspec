@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CodeBase'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'A short description of CodeBase.'
 
 # This description is used to generate tags and improve search results.
@@ -51,4 +51,5 @@ TODO: Add long description of the pod here.
     s.dependency 'RxCocoa',    '~> 4.0'
     s.dependency 'Moya/RxSwift'
     s.dependency 'SwiftyJSON'
+    s.dependency 'Then'
 end

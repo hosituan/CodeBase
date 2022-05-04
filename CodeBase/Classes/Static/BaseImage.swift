@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-struct BaseImage {
-    struct Navigation {
+public class BaseImage {
+    public struct Navigation {
         public static var backIcon: UIImage?
         public static var closeIcon: UIImage?
     }

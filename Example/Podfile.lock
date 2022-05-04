@@ -3,7 +3,7 @@ PODS:
   - CocoaLumberjack/Core (3.7.4)
   - CocoaLumberjack/Swift (3.7.4):
     - CocoaLumberjack/Core
-  - CodeBase (0.1.0):
+  - CodeBase (0.0.3):
     - CocoaLumberjack/Swift
     - DZNEmptyDataSet
     - IQKeyboardManagerSwift (~> 6.0.4)
@@ -64,7 +64,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   CocoaLumberjack: 543c79c114dadc3b1aba95641d8738b06b05b646
-  CodeBase: 2c37e2005b5ddbe5f38fef425d11926d2f26972b
+  CodeBase: 97c183a4eaeb8131a79847307088081fd2727d1e
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   IQKeyboardManagerSwift: c14eca30f6001457d6ddf25e313f23fb6578c41c
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51

@@ -1,6 +1,6 @@
 {
   "name": "CodeBase",
-  "version": "0.1.0",
+  "version": "0.0.3",
   "summary": "A short description of CodeBase.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/hosituan/CodeBase",
@@ -13,12 +13,13 @@
   },
   "source": {
     "git": "https://github.com/hosituan/CodeBase.git",
-    "tag": "0.1.0"
+    "tag": "0.0.3"
   },
   "platforms": {
     "ios": "12.0"
   },
-  "source_files": "*",
+  "swift_versions": "5.2",
+  "source_files": "CodeBase/**/*",
   "frameworks": "UIKit",
   "dependencies": {
     "SnapKit": [
@@ -54,5 +55,6 @@
     "SwiftyJSON": [
 
     ]
-  }
+  },
+  "swift_version": "5.2"
 }

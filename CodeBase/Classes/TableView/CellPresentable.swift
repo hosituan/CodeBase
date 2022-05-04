@@ -8,27 +8,27 @@
 import Foundation
 import UIKit
 
-protocol Presentable {}
-protocol CellPresentable: Presentable {
+public protocol Presentable {}
+public protocol CellPresentable: Presentable {
     var index: IndexPath { get set }
     var cellIdentifier: String { get set }
     var cellHeight: CGFloat { get set }
 }
 
-class CellPresentableRowViewModel: CellPresentable {
-    var index: IndexPath
+public class CellPresentableRowViewModel: CellPresentable {
+    public var index: IndexPath
     
-    var cellIdentifier: String
+    public var cellIdentifier: String
     
-    var cellHeight: CGFloat
+    public var cellHeight: CGFloat
     
-    init(cellIdentifier: String, cellHeight: CGFloat, index: IndexPath) {
+    public init(cellIdentifier: String, cellHeight: CGFloat, index: IndexPath) {
         self.cellIdentifier = cellIdentifier
         self.cellHeight = cellHeight
         self.index = index
     }
     
 }
-protocol CellConfigurable {
+public protocol CellConfigurable {
     func setup(viewModel: CellPresentable)
 }
