@@ -16,6 +16,7 @@
 		FBF0D646282272EC000011CA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF0D645282272EC000011CA /* HomeViewController.swift */; };
 		FBF0D64828227444000011CA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF0D64728227444000011CA /* HomeViewModel.swift */; };
 		FBF0D64E28227663000011CA /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF0D64D28227663000011CA /* ExampleTableViewCell.swift */; };
+		FBF0D66628228897000011CA /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF0D66528228897000011CA /* NextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FBF0D645282272EC000011CA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FBF0D64728227444000011CA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FBF0D64D28227663000011CA /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
+		FBF0D66528228897000011CA /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				FBF0D6432822715A000011CA /* StaticConfig.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				FBF0D645282272EC000011CA /* HomeViewController.swift */,
+				FBF0D66528228897000011CA /* NextViewController.swift */,
 				FBF0D64D28227663000011CA /* ExampleTableViewCell.swift */,
 				FBF0D64728227444000011CA /* HomeViewModel.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -218,6 +221,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -235,6 +239,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -271,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				FBF0D66628228897000011CA /* NextViewController.swift in Sources */,
 				FBF0D64E28227663000011CA /* ExampleTableViewCell.swift in Sources */,
 				FBF0D6442822715A000011CA /* StaticConfig.swift in Sources */,
 				FBF0D646282272EC000011CA /* HomeViewController.swift in Sources */,

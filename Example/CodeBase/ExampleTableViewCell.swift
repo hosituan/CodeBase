@@ -22,6 +22,9 @@ class ExampleTableViewCell: BaseTableViewCell {
             make.top.left.equalToSuperview().offset(12)
             make.centerX.centerY.equalToSuperview()
         }
+        titleLabel.setAction {
+            print("tap label")
+        }
         
     }
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 import CodeBase
+import UIKit
 
 class HomeViewController: TableViewController {
     
@@ -33,5 +34,17 @@ class HomeViewController: TableViewController {
     }
     override func setupTableView() {
         super.setupTableView()
+    }
+    
+    
+}
+
+extension HomeViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let model = tableViewModel?.modelForRow(at: indexPath) else { return }
+        let nextVC = NextViewController()
+        nextVC.title = model.cellIdentifier
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }

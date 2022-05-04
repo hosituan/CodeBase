@@ -20,8 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let initialViewController = HomeViewController()
         let navigationController = UINavigationController(rootViewController: initialViewController)
         self.window?.rootViewController = navigationController
-        
         self.window?.makeKeyAndVisible()
+        if #available(iOS 15.0, *) {
+            UITableView.appearance().sectionHeaderTopPadding = 0.0
+        }
         return true
     }
     
